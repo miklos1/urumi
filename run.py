@@ -188,6 +188,23 @@ def ffc_compile_form(form, parameters=None):
     return code_c
 
 
+def ffc_nonaffine_compile_form(form, parameters=None):
+    if parameters is None:
+        parameters = ffc.default_parameters()
+    else:
+        _ = ffc.default_parameters()
+        _.update(parameters)
+        parameters = _
+
+    # Firedrake settings
+    parameters["write_file"] = False
+    parameters["format"] = 'pyop2'
+    parameters["representation"] = 'quadrature'
+    parameters["pyop2-ir"] = True
+
+    return ffc.compile_form([form], parameters=parameters)
+
+
 compilers = {
     'tensor': lambda form: ffc_compile_form(
         form,
@@ -197,6 +214,10 @@ compilers = {
     #     form,
     #     parameters={'representation': 'quadrature', 'quadrature_degree': 6}
     # ),
+    'ffc-nonaffine': lambda form: ffc_nonaffine_compile_form(
+        form,
+        parameters={'representation': 'quadrature', 'quadrature_degree': 6}
+    ),
     'uflacs': lambda form: ffc_compile_form(
         form,
         parameters={'representation': 'uflacs', 'quadrature_degree': 6}
