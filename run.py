@@ -18,13 +18,12 @@ ffc_logger.setLevel(logging.WARNING)
 
 
 try:
+    # Check for the presence of new UFL classes
     ufl.Mesh
     ufl.FunctionSpace
 
-    def ufl_cell(domain):
-        return domain.ufl_cell()
-
 except AttributeError:
+    # Old UFL detected: set up a compatibility layer.
     def mesh(element):
         return ufl.Domain(ufl.Coefficient(element))
 
@@ -41,6 +40,7 @@ domains = [ufl.Mesh(ufl.VectorElement('P', ufl.triangle, 1)),
 
 
 def helmholtz(domain, q, p, nf=0):
+    # Based on https://github.com/firedrakeproject/firedrake-bench/blob/experiments/forms/firedrake_forms.py
     V = ufl.FunctionSpace(domain, ufl.FiniteElement('P', domain.ufl_cell(), q))
     P = ufl.FunctionSpace(domain, ufl.FiniteElement('P', domain.ufl_cell(), p))
     u = ufl.TrialFunction(V)
@@ -51,8 +51,9 @@ def helmholtz(domain, q, p, nf=0):
 
 
 def elasticity(domain, q, p, nf=0):
+    # Based on https://github.com/firedrakeproject/firedrake-bench/blob/experiments/forms/firedrake_forms.py
     V = ufl.FunctionSpace(domain, ufl.VectorElement('P', domain.ufl_cell(), q))
-    P = ufl.FunctionSpace(domain, ufl.VectorElement('P', domain.ufl_cell(), p))
+    P = ufl.FunctionSpace(domain, ufl.FiniteElement('P', domain.ufl_cell(), p))
     u = ufl.TrialFunction(V)
     v = ufl.TestFunction(V)
 
@@ -64,6 +65,7 @@ def elasticity(domain, q, p, nf=0):
 
 
 def hyperelasticity(domain, q, p, nf=0):
+    # Based on https://github.com/firedrakeproject/firedrake-bench/blob/experiments/forms/firedrake_forms.py
     V = ufl.FunctionSpace(domain, ufl.VectorElement('P', domain.ufl_cell(), q))
     P = ufl.FunctionSpace(domain, ufl.VectorElement('P', domain.ufl_cell(), p))
     v = ufl.TestFunction(V)
@@ -91,6 +93,12 @@ def hyperelasticity(domain, q, p, nf=0):
 
 
 def holzapfel_ogden(mesh, q, p, nf=0):
+    # Based on https://gist.github.com/meg-simula/3ab3fd63264c8cf1912b
+    #
+    # Original credit note:
+    # "Original implementation by Gabriel Balaban,
+    # modified by Marie E. Rognes"
+
     from ufl import (Constant, VectorConstant, Identity, Coefficient,
                      TestFunction, det, diff, dot, exp, grad, inner,
                      ln, tr, variable)
@@ -151,13 +159,13 @@ def holzapfel_ogden(mesh, q, p, nf=0):
     E_volumetric = lamda*0.5*ln(J)**2
     psi = isochoric(Fbar) + E_volumetric
 
-    # Find first Piola-Kircchoff tensor
+    # Find first Piola-Kirchhoff tensor
     P = diff(psi, F)
 
     # Define the variational formulation
     it = inner(P, grad(v))
 
-    P = ufl.FunctionSpace(mesh, ufl.FiniteElement('P', mesh.ufl_cell(), p))
+    P = ufl.FunctionSpace(mesh, ufl.VectorElement('P', mesh.ufl_cell(), p))
     f = [ufl.Coefficient(P) for _ in range(nf)]
     return ufl.derivative(reduce(ufl.inner,
                                  list(map(ufl.div, f)) + [it])*ufl.dx, u)
@@ -170,7 +178,9 @@ forms = [holzapfel_ogden]
 def tsfc_compile_form(form, parameters=None):
     import tsfc
     kernel, = tsfc.compile_form(form, parameters=parameters)
-    return kernel.ast
+    # FFC generates C strings, TSFC generates a COFFEE AST.
+    # Convert COFFEE AST to C string for fairness.
+    return kernel.ast.gencode()
 
 
 def ffc_compile_form(form, parameters=None):
@@ -183,8 +193,12 @@ def ffc_compile_form(form, parameters=None):
         _.update(parameters)
         parameters = _
 
-    code_h, code_c = \
-        ffc.compile_form([form], parameters=parameters, jit=True)
+    result = ffc.compile_form([form], parameters=parameters, jit=True)
+    assert isinstance(result, tuple)
+    assert 2 <= len(result) <= 3
+    code_h = result[0]
+    code_c = result[1]
+    # Some versions return a third result which we do not care about.
     return code_c
 
 
