@@ -5,6 +5,7 @@ from six.moves import map, range, zip
 from functools import reduce
 import itertools
 import logging
+import signal
 from time import time
 
 import numpy
@@ -222,43 +223,91 @@ def ffc_nonaffine_compile_form(form, parameters=None):
 compilers = {
     'tensor': lambda form: ffc_compile_form(
         form,
-        parameters={'representation': 'tensor', 'quadrature_degree': 6}
+        parameters={'representation': 'tensor', 'quadrature_degree': 4}
     ),
-    # 'quadrature': lambda form: ffc_compile_form(
-    #     form,
-    #     parameters={'representation': 'quadrature', 'quadrature_degree': 6}
-    # ),
-    'ffc-nonaffine': lambda form: ffc_nonaffine_compile_form(
+    'quadrature': lambda form: ffc_compile_form(
         form,
-        parameters={'representation': 'quadrature', 'quadrature_degree': 6}
+        parameters={'representation': 'quadrature', 'quadrature_degree': 4}
     ),
+    # 'ffc-nonaffine': lambda form: ffc_nonaffine_compile_form(
+    #     form,
+    #     parameters={'quadrature_degree': 4}
+    # ),
     'uflacs': lambda form: ffc_compile_form(
         form,
-        parameters={'representation': 'uflacs', 'quadrature_degree': 6}
+        parameters={'representation': 'uflacs', 'quadrature_degree': 4}
     ),
+    # 'tsfcrepr': lambda form: ffc_compile_form(
+    #     form,
+    #     parameters={'representation': 'tsfc', 'quadrature_degree': 4}
+    # ),
     'tsfc-quick': lambda form: tsfc_compile_form(
         form,
-        parameters={'unroll_indexsum': False, 'quadrature_degree': 6}
+        parameters={'unroll_indexsum': False, 'quadrature_degree': 4}
     ),
     'tsfc-default': lambda form: tsfc_compile_form(
         form,
-        parameters={'quadrature_degree': 6}
+        parameters={'quadrature_degree': 4}
     ),
 }
+
+
+class TimeoutError(Exception):
+    pass
+
+
+def handler(signum, frame):
+    assert signum == signal.SIGALRM
+    raise TimeoutError
+
+
+# Set the signal handler
+signal.signal(signal.SIGALRM, handler)
+
+
+def time_limit(seconds):
+    def decorator(func):
+        def decorated(*args, **kwargs):
+            try:
+                signal.alarm(seconds)
+                return func(*args, **kwargs)
+            finally:
+                signal.alarm(0)      # Disable the alarm
+        return decorated
+    return decorator
 
 
 def run():
     for domain, form, (name, compiler) in itertools.product(domains, forms, iteritems(compilers)):
         if form in [hyperelasticity, holzapfel_ogden] and name == 'tensor':
             continue
-        f = form(domain, 2, 2)
-        number = 1
-        start = time()
-        ends = [None] * number
-        for i in range(number):
-            compiler(f)
-            ends[i] = time()
-        times = numpy.diff([start] + ends)
-        times.sort()
-        t = times[:3].mean()
-        print(form.__name__, domain.ufl_cell().topological_dimension(), name, t)
+        for nf in range(1):  # 4
+            for degree in range(1, 5):
+                f = form(domain, degree, degree, nf)
+
+                @time_limit(100)
+                def measure():
+                    number = 10
+                    ends = [None] * number
+                    start = time()
+                    for i in range(number):
+                        compiler(f)
+                        ends[i] = time()
+                    times = numpy.diff([start] + ends)
+                    times.sort()
+                    return times[:3].mean()  # average of the three best
+
+                def measure_once():
+                    start = time()
+                    compiler(f)
+                    return time() - start
+
+                try:
+                    t = measure()
+                except TimeoutError:
+                    t = 99.9999
+                print(form.__name__, 'dim:', domain.ufl_cell().topological_dimension(), 'degree:', degree, 'nf:', nf, name, t)
+
+
+if __name__ == "__main__":
+    run()
