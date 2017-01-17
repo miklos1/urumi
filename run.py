@@ -172,8 +172,7 @@ def holzapfel_ogden(mesh, q, p, nf=0):
                                  list(map(ufl.div, f)) + [it])*ufl.dx, u)
 
 
-# forms = [helmholtz, elasticity, hyperelasticity, holzapfel_ogden]
-forms = [holzapfel_ogden]
+forms = [helmholtz, elasticity, hyperelasticity, holzapfel_ogden]
 
 
 def tsfc_compile_form(form, parameters=None):
