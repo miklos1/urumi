@@ -299,11 +299,12 @@ def run():
 
                 def measure_once():
                     start = time()
-                    compiler(f)
-                    return time() - start
+                    code = compiler(f)
+                    end = time()
+                    return end - start, len(code)
 
                 try:
-                    t, size = measure()
+                    t, size = measure_once()
                 except TimeoutError:
                     t, size = 99.9999, None
 
