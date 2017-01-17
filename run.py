@@ -280,7 +280,7 @@ def run():
     for domain, form, (name, compiler) in itertools.product(domains, forms, iteritems(compilers)):
         if form in [hyperelasticity, holzapfel_ogden] and name == 'tensor':
             continue
-        for nf in range(1):  # 4
+        for nf in range(1):
             for degree in range(1, 5):
                 f = form(domain, degree, degree, nf)
 
@@ -305,7 +305,9 @@ def run():
                     t = measure()
                 except TimeoutError:
                     t = 99.9999
-                print(form.__name__, 'dim:', domain.ufl_cell().topological_dimension(), 'degree:', degree, 'nf:', nf, name, t)
+
+                assert nf == 0
+                print(form.__name__, 'dim:', domain.ufl_cell().topological_dimension(), 'degree:', degree, name, t)
 
 
 if __name__ == "__main__":
