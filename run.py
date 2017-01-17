@@ -216,7 +216,8 @@ def ffc_nonaffine_compile_form(form, parameters=None):
     parameters["representation"] = 'quadrature'
     parameters["pyop2-ir"] = True
 
-    return ffc.compile_form([form], parameters=parameters)
+    kernel, = ffc.compile_form([form], parameters=parameters)
+    return kernel.gencode()
 
 
 compilers = {
