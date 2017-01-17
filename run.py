@@ -284,17 +284,17 @@ def run():
             for degree in range(1, 5):
                 f = form(domain, degree, degree, nf)
 
-                @time_limit(100)
+                @time_limit(180)
                 def measure():
                     number = 10
                     ends = [None] * number
                     start = time()
                     for i in range(number):
-                        compiler(f)
+                        code = compiler(f)
                         ends[i] = time()
                     times = numpy.diff([start] + ends)
                     times.sort()
-                    return times[:3].mean()  # average of the three best
+                    return times[:3].mean(), len(code)  # average of the three best
 
                 def measure_once():
                     start = time()
@@ -302,12 +302,12 @@ def run():
                     return time() - start
 
                 try:
-                    t = measure()
+                    t, size = measure()
                 except TimeoutError:
-                    t = 99.9999
+                    t, size = 99.9999, None
 
                 assert nf == 0
-                print(form.__name__, 'dim:', domain.ufl_cell().topological_dimension(), 'degree:', degree, name, t)
+                print(form.__name__, 'dim:', domain.ufl_cell().topological_dimension(), 'degree:', degree, name, t, size)
 
 
 if __name__ == "__main__":
