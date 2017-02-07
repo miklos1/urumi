@@ -1,11 +1,12 @@
 from __future__ import absolute_import, print_function, division
 from six import iteritems
-from six.moves import map, range, zip
+from six.moves import map, range
 
 from functools import reduce
 import itertools
 import logging
 import signal
+import sys
 from time import time
 
 import numpy
@@ -220,27 +221,15 @@ def ffc_nonaffine_compile_form(form, parameters=None):
     return kernel.gencode()
 
 
-compilers = {
-    'tensor': lambda form: ffc_compile_form(
-        form,
-        parameters={'representation': 'tensor', 'quadrature_degree': 4}
-    ),
+compilers_current = {
     'quadrature': lambda form: ffc_compile_form(
         form,
         parameters={'representation': 'quadrature', 'quadrature_degree': 4}
     ),
-    # 'ffc-nonaffine': lambda form: ffc_nonaffine_compile_form(
-    #     form,
-    #     parameters={'quadrature_degree': 4}
-    # ),
     'uflacs': lambda form: ffc_compile_form(
         form,
         parameters={'representation': 'uflacs', 'quadrature_degree': 4}
     ),
-    # 'tsfcrepr': lambda form: ffc_compile_form(
-    #     form,
-    #     parameters={'representation': 'tsfc', 'quadrature_degree': 4}
-    # ),
     'tsfc-quick': lambda form: tsfc_compile_form(
         form,
         parameters={'unroll_indexsum': False, 'quadrature_degree': 4}
@@ -248,6 +237,26 @@ compilers = {
     'tsfc-default': lambda form: tsfc_compile_form(
         form,
         parameters={'quadrature_degree': 4}
+    ),
+}
+
+
+compilers_obsolete = {
+    'ffc-nonaffine': lambda form: ffc_nonaffine_compile_form(
+        form,
+        parameters={'quadrature_degree': 4}
+    ),
+}
+
+
+compilers_unused = {
+    'tensor': lambda form: ffc_compile_form(
+        form,
+        parameters={'representation': 'tensor', 'quadrature_degree': 4}
+    ),
+    'tsfcrepr': lambda form: ffc_compile_form(
+        form,
+        parameters={'representation': 'tsfc', 'quadrature_degree': 4}
     ),
 }
 
@@ -265,7 +274,7 @@ def handler(signum, frame):
 signal.signal(signal.SIGALRM, handler)
 
 
-def time_limit(seconds):
+def time_out(seconds):
     def decorator(func):
         def decorated(*args, **kwargs):
             try:
@@ -277,40 +286,53 @@ def time_limit(seconds):
     return decorator
 
 
-def run():
+def run(compilers, time_limit):
     for domain, form, (name, compiler) in itertools.product(domains, forms, iteritems(compilers)):
-        if form in [hyperelasticity, holzapfel_ogden] and name == 'tensor':
+        if name == 'tensor' and form in [hyperelasticity, holzapfel_ogden]:
+            # Fails due to missing features
             continue
-        for nf in range(1):
-            for degree in range(1, 5):
-                f = form(domain, degree, degree, nf)
 
-                @time_limit(180)
-                def measure():
-                    number = 10
-                    ends = [None] * number
-                    start = time()
-                    for i in range(number):
-                        code = compiler(f)
-                        ends[i] = time()
-                    times = numpy.diff([start] + ends)
-                    times.sort()
-                    return times[:3].mean(), len(code)  # average of the three best
+        if name == 'ffc-nonaffine' and form == holzapfel_ogden:
+            # Takes "infinite" time to complete
+            continue
 
-                def measure_once():
-                    start = time()
-                    code = compiler(f)
-                    end = time()
-                    return end - start, len(code)
+        nf = 0
+        degree = 2
 
-                try:
-                    t, size = measure_once()
-                except TimeoutError:
-                    t, size = 99.9999, None
+        f = form(domain, degree, degree, nf)
+        number = 18
 
-                assert nf == 0
-                print(form.__name__, 'dim:', domain.ufl_cell().topological_dimension(), 'degree:', degree, name, t, size)
+        @time_out(time_limit)
+        def measure():
+            ends = [None] * number
+            start = time()
+            for i in range(number):
+                code = compiler(f)
+                ends[i] = time()
+            times = numpy.diff([start] + ends)
+            return list(times), len(code)
+
+        def measure_once():
+            start = time()
+            code = compiler(f)
+            end = time()
+            return [end - start], len(code)
+
+        try:
+            times, size = measure()
+
+            for t in times:
+                print(form.__name__, domain.ufl_cell().topological_dimension(), name, t)
+        except TimeoutError:
+            print('Measurement timed out:', form.__name__, domain.ufl_cell().topological_dimension(), name,
+                  file=sys.stderr)
 
 
 if __name__ == "__main__":
-    run()
+    _, mode = sys.argv
+    if mode == 'current':
+        run(compilers_current, 7200)
+    elif mode == 'ffc-bendy':
+        run(compilers_obsolete, 18000)
+    else:
+        assert False, "unrecognised mode"
