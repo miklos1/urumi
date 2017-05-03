@@ -105,11 +105,10 @@ def holzapfel_ogden(mesh, q, p, nf=0):
     # modified by Marie E. Rognes"
 
     from ufl import (Constant, VectorConstant, Identity, Coefficient,
-                     TestFunction, det, diff, dot, exp, grad, inner,
-                     ln, tr, variable)
+                     TestFunction, conditional, det, diff, dot, exp,
+                     grad, inner, tr, variable)
 
     # Define some random parameters
-    lamda = Constant(mesh)
     a = Constant(mesh)
     b = Constant(mesh)
     a_s = Constant(mesh)
@@ -125,24 +124,22 @@ def holzapfel_ogden(mesh, q, p, nf=0):
     e_f = VectorConstant(mesh)
 
     # Define the isochoric energy contribution
-    def isochoric(F):
-        C = F.T*F
-
+    def isochoric(C):
         I_1 = tr(C)
         I4_f = dot(e_f, C*e_f)
         I4_s = dot(e_s, C*e_s)
-        I8_fs = dot(e_f, C*e_s)
+        I8_fs = dot(e_s, C*e_f)
 
-        def cutoff(x):
-            return 1.0/(1.0 + exp(-(x - 1.0)*30.0))
+        def heaviside(x):
+            return conditional(x < 1, 0, 1)
 
-        def scaled_exp(a0, a1, argument):
-            return a0/(2.0*a1)*(exp(b*argument) - 1)
+        def scaled_exp(a, b, x):
+            return a/(2*b)*(exp(b*x) - 1)
 
-        E_1 = scaled_exp(a, b, I_1 - 3.)
+        E_1 = scaled_exp(a, b, I_1 - 3)
 
-        E_f = cutoff(I4_f)*scaled_exp(a_f, b_f, (I4_f - 1.)**2)
-        E_s = cutoff(I4_s)*scaled_exp(a_s, b_s, (I4_s - 1.)**2)
+        E_f = heaviside(I4_f)*scaled_exp(a_f, b_f, (I4_f - 1)**2)
+        E_s = heaviside(I4_s)*scaled_exp(a_s, b_s, (I4_s - 1)**2)
         E_3 = scaled_exp(a_fs, b_fs, I8_fs**2)
 
         E = E_1 + E_f + E_s + E_3
@@ -158,14 +155,13 @@ def holzapfel_ogden(mesh, q, p, nf=0):
     F = grad(u) + I
     F = variable(F)
     J = det(F)
-    Fbar = J**(-1.0/3.0)*F
+    Cbar = J**(-2/3)*F.T*F
 
     # Define energy
-    E_volumetric = lamda*0.5*ln(J)**2
-    psi = isochoric(Fbar) + E_volumetric
+    Psi = isochoric(Cbar)
 
     # Find first Piola-Kirchhoff tensor
-    P = diff(psi, F)
+    P = diff(Psi, F)
 
     # Define the variational formulation
     it = inner(P, grad(v))
