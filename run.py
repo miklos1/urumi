@@ -5,14 +5,17 @@ from six.moves import map, range
 from functools import reduce
 import itertools
 import logging
+import re
 import signal
+import subprocess
 import sys
 from time import time
 
-import numpy
-
 import ufl
-import ffc
+try:
+    import ffc
+except ImportError:
+    ffc = None
 
 
 ffc_logger = logging.getLogger("FFC")
@@ -178,10 +181,25 @@ forms = [helmholtz, elasticity, hyperelasticity, holzapfel_ogden]
 
 def tsfc_compile_form(form, parameters=None):
     import tsfc
-    kernel, = tsfc.compile_form(form, parameters=parameters)
+
+    tic = time()
     # FFC generates C strings, TSFC generates a COFFEE AST.
     # Convert COFFEE AST to C string for fairness.
-    return kernel.ast.gencode()
+    kernel, = tsfc.compile_form(form, parameters=parameters)
+    code = kernel.ast.gencode()
+    T1 = time() - tic
+
+    print('#include <math.h>\n',
+          '#include <string.h>\n',
+          code.replace('static inline', '', 1),
+          file=open("Form.c", 'w'))
+
+    tic = time()
+    subprocess.check_call(["cc", "-pipe", "-c", "-O2", "-std=c99", "Form.c"])
+    T2 = time() - tic
+
+    inst = int(subprocess.check_output("objdump -d Form.o | wc -l", shell=True))
+    return T1 + T2, inst
 
 
 def ffc_compile_form(form, parameters=None):
@@ -194,13 +212,38 @@ def ffc_compile_form(form, parameters=None):
         _.update(parameters)
         parameters = _
 
+    tic = time()
     result = ffc.compile_form([form], parameters=parameters, jit=True)
+    T1 = time() - tic
+
+    # Some versions return a third result which we do not care about.
     assert isinstance(result, tuple)
     assert 2 <= len(result) <= 3
-    code_h = result[0]
+    code_h = result[0]  # noqa: F841
     code_c = result[1]
-    # Some versions return a third result which we do not care about.
-    return code_c
+    # lines = ['#include <math.h>', '#include <string.h>']  # TSFC representation
+    # lines = ['#include <algorithm>']  # UFLACS representation
+    # lines = ['#include <algorithm>', "#include <ufc_geometry.h>"]  # Legacy representations
+    lines = ["#include <cstring>", "#include <algorithm>", "#include <ufc_geometry.h>"]
+    it = iter(code_c.split('\n'))
+    for line in it:
+        if '::tabulate_tensor' in line:
+            lines.append(re.sub(' .*::', ' ', line))
+            for line in it:
+                lines.append(re.sub('\) const', ')', line))
+                if line == '}':
+                    break
+            else:
+                assert False
+    code_c = '\n'.join(lines)
+    print(code_c, file=open("Form.cpp", 'w'))
+
+    tic = time()
+    subprocess.check_call(["c++", "-pipe", "-c", "-O2", "-std=c++11", "-I/home/mh1714/ffc-tsfc/src/ffc/ffc/backends/ufc/", "Form.cpp"])
+    T2 = time() - tic
+
+    inst = int(subprocess.check_output("objdump -d Form.o | wc -l", shell=True))
+    return T1 + T2, inst
 
 
 def ffc_nonaffine_compile_form(form, parameters=None):
@@ -224,11 +267,11 @@ def ffc_nonaffine_compile_form(form, parameters=None):
 compilers_current = {
     'quadrature': lambda form: ffc_compile_form(
         form,
-        parameters={'representation': 'quadrature', 'quadrature_degree': 4}
+        parameters={'representation': 'quadrature', 'optimize': False, 'quadrature_degree': 4}
     ),
     'uflacs': lambda form: ffc_compile_form(
         form,
-        parameters={'representation': 'uflacs', 'quadrature_degree': 4}
+        parameters={'representation': 'uflacs', 'optimize': False, 'quadrature_degree': 4}
     ),
     'tsfc-quick': lambda form: tsfc_compile_form(
         form,
@@ -292,7 +335,7 @@ def run(compilers, time_limit):
             # Fails due to missing features
             continue
 
-        if name == 'ffc-nonaffine' and form == holzapfel_ogden:
+        if name in ['ffc-nonaffine', 'quadrature'] and form == holzapfel_ogden:
             # Takes "infinite" time to complete
             continue
 
@@ -304,25 +347,24 @@ def run(compilers, time_limit):
 
         @time_out(time_limit)
         def measure():
-            ends = [None] * number
-            start = time()
+            ts = [None] * number
+            ns = set()
             for i in range(number):
-                code = compiler(f)
-                ends[i] = time()
-            times = numpy.diff([start] + ends)
-            return list(times), len(code)
+                t, n = compiler(f)
+                ts[i] = t
+                ns.add(n)
+            n, = ns
+            return ts, n
 
         def measure_once():
-            start = time()
-            code = compiler(f)
-            end = time()
-            return [end - start], len(code)
+            t, n = compiler(f)
+            return [t], n
 
         try:
             times, size = measure()
 
             for t in times:
-                print(form.__name__, domain.ufl_cell().topological_dimension(), name, t)
+                print(form.__name__, domain.ufl_cell().topological_dimension(), name, t, size)
         except TimeoutError:
             print('Measurement timed out:', form.__name__, domain.ufl_cell().topological_dimension(), name,
                   file=sys.stderr)
