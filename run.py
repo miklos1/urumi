@@ -256,8 +256,21 @@ def ffc_nonaffine_compile_form(form, parameters=None):
     parameters["representation"] = 'quadrature'
     parameters["pyop2-ir"] = True
 
+    tic = time()
     kernel, = ffc.compile_form([form], parameters=parameters)
-    return kernel.gencode()
+    code = kernel.gencode()
+    T1 = time() - tic
+
+    print('#include <math.h>\n',
+          code.replace('static inline', '', 1),
+          file=open("Form.c", 'w'))
+
+    tic = time()
+    subprocess.check_call(["cc", "-pipe", "-c", "-O2", "-std=c99", "Form.c"])
+    T2 = time() - tic
+
+    inst = int(subprocess.check_output("objdump -d Form.o | wc -l", shell=True))
+    return T1 + T2, inst
 
 
 compilers_current = {
