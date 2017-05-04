@@ -282,13 +282,13 @@ compilers_current = {
         form,
         parameters={'representation': 'uflacs', 'optimize': False, 'quadrature_degree': 4}
     ),
-    'tsfc-quick': lambda form: tsfc_compile_form(
-        form,
-        parameters={'unroll_indexsum': False, 'quadrature_degree': 4}
-    ),
     'tsfc-default': lambda form: tsfc_compile_form(
         form,
         parameters={'quadrature_degree': 4}
+    ),
+    'tsfcrepr': lambda form: ffc_compile_form(
+        form,
+        parameters={'representation': 'tsfc', 'optimize': False, 'quadrature_degree': 4}
     ),
 }
 
@@ -306,9 +306,9 @@ compilers_unused = {
         form,
         parameters={'representation': 'tensor', 'quadrature_degree': 4}
     ),
-    'tsfcrepr': lambda form: ffc_compile_form(
+    'tsfc-quick': lambda form: tsfc_compile_form(
         form,
-        parameters={'representation': 'tsfc', 'quadrature_degree': 4}
+        parameters={'unroll_indexsum': False, 'quadrature_degree': 4}
     ),
 }
 
