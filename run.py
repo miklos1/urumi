@@ -344,7 +344,7 @@ def run(compilers, time_limit):
             # Fails due to missing features
             continue
 
-        if name in ['ffc-nonaffine', 'quadrature'] and form == holzapfel_ogden:
+        if name == 'ffc-nonaffine' and form == holzapfel_ogden and domain.ufl_cell().geometric_dimension() > 2:
             # Takes "infinite" time to complete
             continue
 
@@ -382,7 +382,7 @@ def run(compilers, time_limit):
 if __name__ == "__main__":
     _, mode = sys.argv
     if mode == 'current':
-        run(compilers_current, 7200)
+        run(compilers_current, 8640)
     elif mode == 'ffc-bendy':
         run(compilers_obsolete, 18000)
     else:
