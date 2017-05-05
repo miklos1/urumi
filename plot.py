@@ -20,7 +20,7 @@ records = collections.defaultdict(list)
 
 with open(filename) as f:
     for line in f.readlines():
-        form, dim, fc, time = line.split()
+        form, dim, fc, time, size = line.split()
         records[(form, int(dim), fc)].append(float(time))
 
 
@@ -32,7 +32,7 @@ def plot(form, dim, axes=None, left_clutter=True, right_clutter=True, top_clutte
     if axes is None:
         axes = plt.axes()
 
-    ticks = ['quadrature', 'fd_bendy', 'UFLACS', 'TSFC', 'TSFC*']
+    ticks = ['fd\_bendy', 'quadrature', 'UFLACS', 'TSFC$\dagger$', 'TSFC']
 
     if right_clutter:
         twinx = axes.twinx()
@@ -58,7 +58,7 @@ def plot(form, dim, axes=None, left_clutter=True, right_clutter=True, top_clutte
     axes.spines['right'].set_visible(False)
 
     axes.set_yscale("log")
-    axes.set_ylim(ymin=1e-2, ymax=1e3)
+    axes.set_ylim(ymin=1e-1, ymax=1e3)
     if left_clutter:
         def myLogFormat(y, pos):
             # Find the number of decimal places required
@@ -71,10 +71,10 @@ def plot(form, dim, axes=None, left_clutter=True, right_clutter=True, top_clutte
     else:
         axes.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, pos: ""))
 
-    for i, fc in enumerate(['quadrature', 'ffc-nonaffine', 'uflacs', 'tsfc-default', 'tsfc-quick']):
+    for i, fc in enumerate(['ffc-nonaffine', 'quadrature', 'uflacs', 'tsfcrepr', 'tsfc-default']):
         times = select(form, dim, fc)
         if not times:
-            axes.add_patch(patches.Rectangle((i+0.5, 0.01), 1, 999.99, facecolor='gray', alpha=0.5, edgecolor="none"))
+            axes.add_patch(patches.Rectangle((i+0.5, 0.1), 1, 999.99, facecolor='gray', alpha=0.5, edgecolor="none"))
             continue
 
         vp = axes.violinplot([times], positions=[i+1], showmedians=True, showextrema=False)
