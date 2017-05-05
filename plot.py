@@ -32,7 +32,7 @@ def plot(form, dim, axes=None, left_clutter=True, right_clutter=True, top_clutte
     if axes is None:
         axes = plt.axes()
 
-    ticks = ['fd\_bendy', 'quadrature', 'UFLACS', 'TSFC$\dagger$', 'TSFC']
+    ticks = ['fd\_bendy', 'quadrature', 'UFLACS', 'TSFC$^\dagger$', 'TSFC']
 
     if right_clutter:
         twinx = axes.twinx()
