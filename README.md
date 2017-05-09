@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/73704566.svg)](https://zenodo.org/badge/latestdoi/73704566)
+
 #### Experimentation framework for the manuscript:
 
 > Miklós Homolya, Lawrence Mitchell, Fabio Luporini, and David
