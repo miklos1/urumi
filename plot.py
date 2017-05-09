@@ -20,6 +20,8 @@ records = collections.defaultdict(list)
 
 with open(filename) as f:
     for line in f.readlines():
+        if 'Ignoring precision' in line:
+            continue  # ignore warnings
         form, dim, fc, time, size = line.split()
         records[(form, int(dim), fc)].append(float(time))
 
