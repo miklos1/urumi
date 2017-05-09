@@ -1,0 +1,846 @@
+helmholtz 2 uflacs 1.33743309975 338
+helmholtz 2 uflacs 1.07951688766 338
+helmholtz 2 uflacs 1.08302688599 338
+helmholtz 2 uflacs 1.08548283577 338
+helmholtz 2 uflacs 1.07259488106 338
+helmholtz 2 uflacs 1.0730407238 338
+helmholtz 2 uflacs 1.10355114937 338
+helmholtz 2 uflacs 1.07946586609 338
+helmholtz 2 uflacs 1.09027290344 338
+helmholtz 2 uflacs 1.08741211891 338
+helmholtz 2 uflacs 1.10836005211 338
+helmholtz 2 uflacs 1.06279802322 338
+helmholtz 2 uflacs 1.07511305809 338
+helmholtz 2 uflacs 1.08786487579 338
+helmholtz 2 uflacs 1.07225489616 338
+helmholtz 2 uflacs 1.09347510338 338
+helmholtz 2 uflacs 1.08505010605 338
+helmholtz 2 uflacs 1.0888338089 338
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+helmholtz 2 quadrature 1.04368519783 135
+helmholtz 2 quadrature 1.03602910042 135
+helmholtz 2 quadrature 1.04492282867 135
+helmholtz 2 quadrature 1.03308606148 135
+helmholtz 2 quadrature 1.02917504311 135
+helmholtz 2 quadrature 1.03206896782 135
+helmholtz 2 quadrature 1.03358316422 135
+helmholtz 2 quadrature 1.03661394119 135
+helmholtz 2 quadrature 1.0330581665 135
+helmholtz 2 quadrature 1.04173731804 135
+helmholtz 2 quadrature 1.03463292122 135
+helmholtz 2 quadrature 1.03472089767 135
+helmholtz 2 quadrature 1.04532718658 135
+helmholtz 2 quadrature 1.02534198761 135
+helmholtz 2 quadrature 1.02195191383 135
+helmholtz 2 quadrature 1.02011680603 135
+helmholtz 2 quadrature 1.01656508446 135
+helmholtz 2 quadrature 1.03348207474 135
+helmholtz 2 tsfcrepr 1.3068780899 149
+helmholtz 2 tsfcrepr 1.08791995049 149
+helmholtz 2 tsfcrepr 1.04083514214 149
+helmholtz 2 tsfcrepr 1.04443907738 149
+helmholtz 2 tsfcrepr 1.03686213493 149
+helmholtz 2 tsfcrepr 1.03867483139 149
+helmholtz 2 tsfcrepr 1.04288578033 149
+helmholtz 2 tsfcrepr 1.04984688759 149
+helmholtz 2 tsfcrepr 1.04897403717 149
+helmholtz 2 tsfcrepr 1.04542207718 149
+helmholtz 2 tsfcrepr 1.04978990555 149
+helmholtz 2 tsfcrepr 1.04882121086 149
+helmholtz 2 tsfcrepr 1.0554151535 149
+helmholtz 2 tsfcrepr 1.04154014587 149
+helmholtz 2 tsfcrepr 1.05686688423 149
+helmholtz 2 tsfcrepr 1.04506587982 149
+helmholtz 2 tsfcrepr 1.03685092926 149
+helmholtz 2 tsfcrepr 1.03293681145 149
+helmholtz 2 tsfc-default 0.239053964615 138
+helmholtz 2 tsfc-default 0.175109863281 138
+helmholtz 2 tsfc-default 0.160661935806 138
+helmholtz 2 tsfc-default 0.173783779144 138
+helmholtz 2 tsfc-default 0.174728870392 138
+helmholtz 2 tsfc-default 0.177312850952 138
+helmholtz 2 tsfc-default 0.161933898926 138
+helmholtz 2 tsfc-default 0.155971765518 138
+helmholtz 2 tsfc-default 0.175614833832 138
+helmholtz 2 tsfc-default 0.180403232574 138
+helmholtz 2 tsfc-default 0.159790754318 138
+helmholtz 2 tsfc-default 0.175130844116 138
+helmholtz 2 tsfc-default 0.158113002777 138
+helmholtz 2 tsfc-default 0.201177120209 138
+helmholtz 2 tsfc-default 0.174522161484 138
+helmholtz 2 tsfc-default 0.180016756058 138
+helmholtz 2 tsfc-default 0.163287878036 138
+helmholtz 2 tsfc-default 0.174590110779 138
+elasticity 2 uflacs 1.22940683365 950
+elasticity 2 uflacs 1.22028899193 950
+elasticity 2 uflacs 1.22908592224 950
+elasticity 2 uflacs 1.21373796463 950
+elasticity 2 uflacs 1.21660113335 950
+elasticity 2 uflacs 1.21542310715 950
+elasticity 2 uflacs 1.23536396027 950
+elasticity 2 uflacs 1.22210717201 950
+elasticity 2 uflacs 1.21327733994 950
+elasticity 2 uflacs 1.22213411331 950
+elasticity 2 uflacs 1.21837282181 950
+elasticity 2 uflacs 1.23068618774 950
+elasticity 2 uflacs 1.23399686813 950
+elasticity 2 uflacs 1.23667311668 950
+elasticity 2 uflacs 1.233314991 950
+elasticity 2 uflacs 1.22273087502 950
+elasticity 2 uflacs 1.23297595978 950
+elasticity 2 uflacs 1.23268795013 950
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+elasticity 2 quadrature 1.08584308624 170
+elasticity 2 quadrature 1.10001802444 170
+elasticity 2 quadrature 1.09972000122 170
+elasticity 2 quadrature 1.08908700943 170
+elasticity 2 quadrature 1.08653521538 170
+elasticity 2 quadrature 1.10006189346 170
+elasticity 2 quadrature 1.08830761909 170
+elasticity 2 quadrature 1.0887928009 170
+elasticity 2 quadrature 1.09390282631 170
+elasticity 2 quadrature 1.09300112724 170
+elasticity 2 quadrature 1.088367939 170
+elasticity 2 quadrature 1.0890250206 170
+elasticity 2 quadrature 1.09079384804 170
+elasticity 2 quadrature 1.08857607841 170
+elasticity 2 quadrature 1.09377908707 170
+elasticity 2 quadrature 1.09322881699 170
+elasticity 2 quadrature 1.08710408211 170
+elasticity 2 quadrature 1.08301711082 170
+elasticity 2 tsfcrepr 1.18640303612 258
+elasticity 2 tsfcrepr 1.09079313278 258
+elasticity 2 tsfcrepr 1.09848809242 258
+elasticity 2 tsfcrepr 1.08381700516 258
+elasticity 2 tsfcrepr 1.03225398064 258
+elasticity 2 tsfcrepr 1.08077597618 258
+elasticity 2 tsfcrepr 1.07997083664 258
+elasticity 2 tsfcrepr 1.07681894302 258
+elasticity 2 tsfcrepr 1.05741071701 258
+elasticity 2 tsfcrepr 1.08360290527 258
+elasticity 2 tsfcrepr 1.09876203537 258
+elasticity 2 tsfcrepr 1.08634185791 258
+elasticity 2 tsfcrepr 1.08643102646 258
+elasticity 2 tsfcrepr 1.09039592743 258
+elasticity 2 tsfcrepr 1.0800049305 258
+elasticity 2 tsfcrepr 1.07095527649 258
+elasticity 2 tsfcrepr 1.09009480476 258
+elasticity 2 tsfcrepr 1.09100413322 258
+elasticity 2 tsfc-default 0.203912258148 246
+elasticity 2 tsfc-default 0.203235149384 246
+elasticity 2 tsfc-default 0.22394990921 246
+elasticity 2 tsfc-default 0.266207933426 246
+elasticity 2 tsfc-default 0.279874801636 246
+elasticity 2 tsfc-default 0.220942020416 246
+elasticity 2 tsfc-default 0.221868038177 246
+elasticity 2 tsfc-default 0.219576120377 246
+elasticity 2 tsfc-default 0.221971750259 246
+elasticity 2 tsfc-default 0.226753950119 246
+elasticity 2 tsfc-default 0.220925092697 246
+elasticity 2 tsfc-default 0.222115039825 246
+elasticity 2 tsfc-default 0.221070289612 246
+elasticity 2 tsfc-default 0.222138881683 246
+elasticity 2 tsfc-default 0.22116112709 246
+elasticity 2 tsfc-default 0.209567785263 246
+elasticity 2 tsfc-default 0.216162204742 246
+elasticity 2 tsfc-default 0.223631620407 246
+hyperelasticity 2 uflacs 1.53752398491 1741
+hyperelasticity 2 uflacs 1.52115011215 1741
+hyperelasticity 2 uflacs 1.50953722 1741
+hyperelasticity 2 uflacs 1.52821183205 1741
+hyperelasticity 2 uflacs 1.52361869812 1741
+hyperelasticity 2 uflacs 1.52542114258 1741
+hyperelasticity 2 uflacs 1.55913805962 1741
+hyperelasticity 2 uflacs 1.5298500061 1741
+hyperelasticity 2 uflacs 1.52958083153 1741
+hyperelasticity 2 uflacs 1.52667403221 1741
+hyperelasticity 2 uflacs 1.50677585602 1741
+hyperelasticity 2 uflacs 1.5183660984 1741
+hyperelasticity 2 uflacs 1.55862879753 1741
+hyperelasticity 2 uflacs 1.51308488846 1741
+hyperelasticity 2 uflacs 1.50125193596 1741
+hyperelasticity 2 uflacs 1.51141405106 1741
+hyperelasticity 2 uflacs 1.51768898964 1741
+hyperelasticity 2 uflacs 1.52565217018 1741
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+hyperelasticity 2 quadrature 1.30015301704 389
+hyperelasticity 2 quadrature 1.31041288376 389
+hyperelasticity 2 quadrature 1.30063509941 389
+hyperelasticity 2 quadrature 1.30155777931 389
+hyperelasticity 2 quadrature 1.30323886871 389
+hyperelasticity 2 quadrature 1.30508708954 389
+hyperelasticity 2 quadrature 1.29052495956 389
+hyperelasticity 2 quadrature 1.29840779305 389
+hyperelasticity 2 quadrature 1.30297899246 389
+hyperelasticity 2 quadrature 1.30075716972 389
+hyperelasticity 2 quadrature 1.31180620193 389
+hyperelasticity 2 quadrature 1.30944490433 389
+hyperelasticity 2 quadrature 1.29301095009 389
+hyperelasticity 2 quadrature 1.3067650795 389
+hyperelasticity 2 quadrature 1.33590984344 389
+hyperelasticity 2 quadrature 1.30386996269 389
+hyperelasticity 2 quadrature 1.30050086975 389
+hyperelasticity 2 quadrature 1.31006193161 389
+hyperelasticity 2 tsfcrepr 1.29153680801 466
+hyperelasticity 2 tsfcrepr 1.29492402077 466
+hyperelasticity 2 tsfcrepr 1.30696415901 466
+hyperelasticity 2 tsfcrepr 1.28375315666 466
+hyperelasticity 2 tsfcrepr 1.29268717766 466
+hyperelasticity 2 tsfcrepr 1.33638906479 466
+hyperelasticity 2 tsfcrepr 1.28407931328 466
+hyperelasticity 2 tsfcrepr 1.29610705376 466
+hyperelasticity 2 tsfcrepr 1.3033208847 466
+hyperelasticity 2 tsfcrepr 1.28384995461 466
+hyperelasticity 2 tsfcrepr 1.29106712341 466
+hyperelasticity 2 tsfcrepr 1.33702301979 466
+hyperelasticity 2 tsfcrepr 1.29480409622 466
+hyperelasticity 2 tsfcrepr 1.28708004951 466
+hyperelasticity 2 tsfcrepr 1.29372811317 466
+hyperelasticity 2 tsfcrepr 1.29468798637 466
+hyperelasticity 2 tsfcrepr 1.29579877853 466
+hyperelasticity 2 tsfcrepr 1.29457783699 466
+hyperelasticity 2 tsfc-default 0.529241085052 457
+hyperelasticity 2 tsfc-default 0.41515994072 457
+hyperelasticity 2 tsfc-default 0.409287929535 457
+hyperelasticity 2 tsfc-default 0.421139001846 457
+hyperelasticity 2 tsfc-default 0.41601896286 457
+hyperelasticity 2 tsfc-default 0.419417858124 457
+hyperelasticity 2 tsfc-default 0.471869945526 457
+hyperelasticity 2 tsfc-default 0.418068170547 457
+hyperelasticity 2 tsfc-default 0.414846897125 457
+hyperelasticity 2 tsfc-default 0.420016050339 457
+hyperelasticity 2 tsfc-default 0.419937849045 457
+hyperelasticity 2 tsfc-default 0.416073083878 457
+hyperelasticity 2 tsfc-default 0.465224266052 457
+hyperelasticity 2 tsfc-default 0.395242929459 457
+hyperelasticity 2 tsfc-default 0.413840055466 457
+hyperelasticity 2 tsfc-default 0.41224193573 457
+hyperelasticity 2 tsfc-default 0.41197180748 457
+hyperelasticity 2 tsfc-default 0.414157152176 457
+holzapfel_ogden 2 uflacs 3.09417891502 6294
+holzapfel_ogden 2 uflacs 3.07638287544 6294
+holzapfel_ogden 2 uflacs 3.02182292938 6294
+holzapfel_ogden 2 uflacs 3.04438209534 6294
+holzapfel_ogden 2 uflacs 3.02982473373 6294
+holzapfel_ogden 2 uflacs 3.01252889633 6294
+holzapfel_ogden 2 uflacs 3.01613330841 6294
+holzapfel_ogden 2 uflacs 3.02728295326 6294
+holzapfel_ogden 2 uflacs 3.04779005051 6294
+holzapfel_ogden 2 uflacs 3.02213907242 6294
+holzapfel_ogden 2 uflacs 3.02486109734 6294
+holzapfel_ogden 2 uflacs 3.14113807678 6294
+holzapfel_ogden 2 uflacs 3.04377198219 6294
+holzapfel_ogden 2 uflacs 3.04562115669 6294
+holzapfel_ogden 2 uflacs 3.02767300606 6294
+holzapfel_ogden 2 uflacs 3.02737689018 6294
+holzapfel_ogden 2 uflacs 3.04462718964 6294
+holzapfel_ogden 2 uflacs 3.05067515373 6294
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+holzapfel_ogden 2 quadrature 18.062735796 29095
+holzapfel_ogden 2 quadrature 18.3949689865 29095
+holzapfel_ogden 2 quadrature 18.359000206 29095
+holzapfel_ogden 2 quadrature 18.3316891193 29095
+holzapfel_ogden 2 quadrature 18.3605959415 29095
+holzapfel_ogden 2 quadrature 18.0564110279 29095
+holzapfel_ogden 2 quadrature 18.3671109676 29095
+holzapfel_ogden 2 quadrature 18.216283083 29095
+holzapfel_ogden 2 quadrature 18.3651406765 29095
+holzapfel_ogden 2 quadrature 18.3461139202 29095
+holzapfel_ogden 2 quadrature 18.3077287674 29095
+holzapfel_ogden 2 quadrature 18.3227458 29095
+holzapfel_ogden 2 quadrature 18.3246529102 29095
+holzapfel_ogden 2 quadrature 18.3134489059 29095
+holzapfel_ogden 2 quadrature 18.3864400387 29095
+holzapfel_ogden 2 quadrature 18.3468637466 29095
+holzapfel_ogden 2 quadrature 18.3892610073 29095
+holzapfel_ogden 2 quadrature 18.3460109234 29095
+holzapfel_ogden 2 tsfcrepr 2.2026219368 2171
+holzapfel_ogden 2 tsfcrepr 2.11634802818 2171
+holzapfel_ogden 2 tsfcrepr 2.05805301666 2171
+holzapfel_ogden 2 tsfcrepr 2.10369300842 2171
+holzapfel_ogden 2 tsfcrepr 2.04756903648 2171
+holzapfel_ogden 2 tsfcrepr 2.08782505989 2171
+holzapfel_ogden 2 tsfcrepr 2.12198615074 2171
+holzapfel_ogden 2 tsfcrepr 2.0702559948 2171
+holzapfel_ogden 2 tsfcrepr 2.0982530117 2171
+holzapfel_ogden 2 tsfcrepr 2.01490283012 2171
+holzapfel_ogden 2 tsfcrepr 2.08307290077 2171
+holzapfel_ogden 2 tsfcrepr 2.12359905243 2171
+holzapfel_ogden 2 tsfcrepr 2.06264781952 2171
+holzapfel_ogden 2 tsfcrepr 2.10179519653 2171
+holzapfel_ogden 2 tsfcrepr 2.11788582802 2171
+holzapfel_ogden 2 tsfcrepr 2.06654191017 2171
+holzapfel_ogden 2 tsfcrepr 2.11178708076 2171
+holzapfel_ogden 2 tsfcrepr 2.04609799385 2171
+holzapfel_ogden 2 tsfc-default 1.30965709686 2194
+holzapfel_ogden 2 tsfc-default 1.2124171257 2194
+holzapfel_ogden 2 tsfc-default 1.16842865944 2194
+holzapfel_ogden 2 tsfc-default 1.24758028984 2194
+holzapfel_ogden 2 tsfc-default 1.16853690147 2194
+holzapfel_ogden 2 tsfc-default 1.23237705231 2194
+holzapfel_ogden 2 tsfc-default 1.22238206863 2194
+holzapfel_ogden 2 tsfc-default 1.19534897804 2194
+holzapfel_ogden 2 tsfc-default 1.23596596718 2194
+holzapfel_ogden 2 tsfc-default 1.16640496254 2194
+holzapfel_ogden 2 tsfc-default 1.21027612686 2194
+holzapfel_ogden 2 tsfc-default 1.18672990799 2194
+holzapfel_ogden 2 tsfc-default 1.1385281086 2194
+holzapfel_ogden 2 tsfc-default 1.22025895119 2194
+holzapfel_ogden 2 tsfc-default 1.2105410099 2194
+holzapfel_ogden 2 tsfc-default 1.15343213081 2194
+holzapfel_ogden 2 tsfc-default 1.25463891029 2194
+holzapfel_ogden 2 tsfc-default 1.17910718918 2194
+helmholtz 3 uflacs 1.63576388359 664
+helmholtz 3 uflacs 1.33421826363 664
+helmholtz 3 uflacs 1.24179005623 664
+helmholtz 3 uflacs 1.28831219673 664
+helmholtz 3 uflacs 1.24240207672 664
+helmholtz 3 uflacs 1.23043298721 664
+helmholtz 3 uflacs 1.2669980526 664
+helmholtz 3 uflacs 1.22838592529 664
+helmholtz 3 uflacs 1.24957609177 664
+helmholtz 3 uflacs 1.25696587563 664
+helmholtz 3 uflacs 1.26076793671 664
+helmholtz 3 uflacs 1.2761991024 664
+helmholtz 3 uflacs 1.23114919662 664
+helmholtz 3 uflacs 1.23888921738 664
+helmholtz 3 uflacs 1.24807190895 664
+helmholtz 3 uflacs 1.2497959137 664
+helmholtz 3 uflacs 1.25293421745 664
+helmholtz 3 uflacs 1.26339411736 664
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+helmholtz 3 quadrature 1.3638510704 233
+helmholtz 3 quadrature 1.34309911728 233
+helmholtz 3 quadrature 1.35500097275 233
+helmholtz 3 quadrature 1.34825205803 233
+helmholtz 3 quadrature 1.3521938324 233
+helmholtz 3 quadrature 1.34920406342 233
+helmholtz 3 quadrature 1.35009217262 233
+helmholtz 3 quadrature 1.37442588806 233
+helmholtz 3 quadrature 1.3624689579 233
+helmholtz 3 quadrature 1.33939099312 233
+helmholtz 3 quadrature 1.33705282211 233
+helmholtz 3 quadrature 1.36433005333 233
+helmholtz 3 quadrature 1.3464910984 233
+helmholtz 3 quadrature 1.34374213219 233
+helmholtz 3 quadrature 1.33226799965 233
+helmholtz 3 quadrature 1.32452893257 233
+helmholtz 3 quadrature 1.35266685486 233
+helmholtz 3 quadrature 1.33732700348 233
+helmholtz 3 tsfcrepr 1.33131670952 262
+helmholtz 3 tsfcrepr 1.1355369091 262
+helmholtz 3 tsfcrepr 1.13168120384 262
+helmholtz 3 tsfcrepr 1.11833786964 262
+helmholtz 3 tsfcrepr 1.12633705139 262
+helmholtz 3 tsfcrepr 1.12890481949 262
+helmholtz 3 tsfcrepr 1.13477301598 262
+helmholtz 3 tsfcrepr 1.13244080544 262
+helmholtz 3 tsfcrepr 1.12714314461 262
+helmholtz 3 tsfcrepr 1.12844800949 262
+helmholtz 3 tsfcrepr 1.13384389877 262
+helmholtz 3 tsfcrepr 1.1040930748 262
+helmholtz 3 tsfcrepr 1.08905386925 262
+helmholtz 3 tsfcrepr 1.10305500031 262
+helmholtz 3 tsfcrepr 1.11543607712 262
+helmholtz 3 tsfcrepr 1.1107339859 262
+helmholtz 3 tsfcrepr 1.15790700912 262
+helmholtz 3 tsfcrepr 1.11879992485 262
+helmholtz 3 tsfc-default 0.432597875595 253
+helmholtz 3 tsfc-default 0.248830080032 253
+helmholtz 3 tsfc-default 0.237513065338 253
+helmholtz 3 tsfc-default 0.255054950714 253
+helmholtz 3 tsfc-default 0.257032871246 253
+helmholtz 3 tsfc-default 0.253441095352 253
+helmholtz 3 tsfc-default 0.258476018906 253
+helmholtz 3 tsfc-default 0.24883890152 253
+helmholtz 3 tsfc-default 0.235718011856 253
+helmholtz 3 tsfc-default 0.257843017578 253
+helmholtz 3 tsfc-default 0.296213150024 253
+helmholtz 3 tsfc-default 0.257441997528 253
+helmholtz 3 tsfc-default 0.257772922516 253
+helmholtz 3 tsfc-default 0.26069688797 253
+helmholtz 3 tsfc-default 0.248763084412 253
+helmholtz 3 tsfc-default 0.255357980728 253
+helmholtz 3 tsfc-default 0.255785942078 253
+helmholtz 3 tsfc-default 0.257052898407 253
+elasticity 3 uflacs 2.79261493683 4262
+elasticity 3 uflacs 2.81826114655 4262
+elasticity 3 uflacs 2.75885009766 4262
+elasticity 3 uflacs 2.76913928986 4262
+elasticity 3 uflacs 2.7516477108 4262
+elasticity 3 uflacs 2.80921196938 4262
+elasticity 3 uflacs 2.76312613487 4262
+elasticity 3 uflacs 2.76959681511 4262
+elasticity 3 uflacs 2.74998211861 4262
+elasticity 3 uflacs 2.80284404755 4262
+elasticity 3 uflacs 2.75208210945 4262
+elasticity 3 uflacs 2.77542686462 4262
+elasticity 3 uflacs 2.7750878334 4262
+elasticity 3 uflacs 2.75283503532 4262
+elasticity 3 uflacs 2.81402301788 4262
+elasticity 3 uflacs 2.75911998749 4262
+elasticity 3 uflacs 2.79666304588 4262
+elasticity 3 uflacs 2.78586578369 4262
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+elasticity 3 quadrature 1.83103895187 411
+elasticity 3 quadrature 1.83375382423 411
+elasticity 3 quadrature 1.83033299446 411
+elasticity 3 quadrature 1.83559012413 411
+elasticity 3 quadrature 1.84179115295 411
+elasticity 3 quadrature 1.82390117645 411
+elasticity 3 quadrature 1.85281300545 411
+elasticity 3 quadrature 1.82759213448 411
+elasticity 3 quadrature 1.86407399178 411
+elasticity 3 quadrature 1.90065431595 411
+elasticity 3 quadrature 1.82328605652 411
+elasticity 3 quadrature 1.84309315681 411
+elasticity 3 quadrature 1.86882019043 411
+elasticity 3 quadrature 1.87664079666 411
+elasticity 3 quadrature 1.86448383331 411
+elasticity 3 quadrature 1.82337403297 411
+elasticity 3 quadrature 1.86251378059 411
+elasticity 3 quadrature 1.83031082153 411
+elasticity 3 tsfcrepr 1.33251595497 536
+elasticity 3 tsfcrepr 1.21688485146 536
+elasticity 3 tsfcrepr 1.21035122871 536
+elasticity 3 tsfcrepr 1.22909617424 536
+elasticity 3 tsfcrepr 1.20749402046 536
+elasticity 3 tsfcrepr 1.24167370796 536
+elasticity 3 tsfcrepr 1.27447104454 536
+elasticity 3 tsfcrepr 1.23286128044 536
+elasticity 3 tsfcrepr 1.22942376137 536
+elasticity 3 tsfcrepr 1.23483133316 536
+elasticity 3 tsfcrepr 1.22021913528 536
+elasticity 3 tsfcrepr 1.23304200172 536
+elasticity 3 tsfcrepr 1.22050428391 536
+elasticity 3 tsfcrepr 1.21809387207 536
+elasticity 3 tsfcrepr 1.21913576126 536
+elasticity 3 tsfcrepr 1.25044798851 536
+elasticity 3 tsfcrepr 1.21058082581 536
+elasticity 3 tsfcrepr 1.19921708107 536
+elasticity 3 tsfc-default 0.348469018936 531
+elasticity 3 tsfc-default 0.350403308868 531
+elasticity 3 tsfc-default 0.318953990936 531
+elasticity 3 tsfc-default 0.330787181854 531
+elasticity 3 tsfc-default 0.337490081787 531
+elasticity 3 tsfc-default 0.526571035385 531
+elasticity 3 tsfc-default 0.358157157898 531
+elasticity 3 tsfc-default 0.329348087311 531
+elasticity 3 tsfc-default 0.322745084763 531
+elasticity 3 tsfc-default 0.350317001343 531
+elasticity 3 tsfc-default 0.344330072403 531
+elasticity 3 tsfc-default 0.321740150452 531
+elasticity 3 tsfc-default 0.393066167831 531
+elasticity 3 tsfc-default 0.32199716568 531
+elasticity 3 tsfc-default 0.337499856949 531
+elasticity 3 tsfc-default 0.326236963272 531
+elasticity 3 tsfc-default 0.34729218483 531
+elasticity 3 tsfc-default 0.330384016037 531
+hyperelasticity 3 uflacs 4.58470201492 8427
+hyperelasticity 3 uflacs 4.55302906036 8427
+hyperelasticity 3 uflacs 4.58198094368 8427
+hyperelasticity 3 uflacs 4.51403713226 8427
+hyperelasticity 3 uflacs 4.47486877441 8427
+hyperelasticity 3 uflacs 4.53217482567 8427
+hyperelasticity 3 uflacs 4.50404596329 8427
+hyperelasticity 3 uflacs 4.45461201668 8427
+hyperelasticity 3 uflacs 4.50498080254 8427
+hyperelasticity 3 uflacs 4.45809626579 8427
+hyperelasticity 3 uflacs 4.51894116402 8427
+hyperelasticity 3 uflacs 4.50907707214 8427
+hyperelasticity 3 uflacs 4.49281477928 8427
+hyperelasticity 3 uflacs 4.54149723053 8427
+hyperelasticity 3 uflacs 4.52583670616 8427
+hyperelasticity 3 uflacs 4.49324512482 8427
+hyperelasticity 3 uflacs 4.47034788132 8427
+hyperelasticity 3 uflacs 4.48444080353 8427
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+hyperelasticity 3 quadrature 3.22668790817 1110
+hyperelasticity 3 quadrature 3.23066282272 1110
+hyperelasticity 3 quadrature 3.25430989265 1110
+hyperelasticity 3 quadrature 3.2283217907 1110
+hyperelasticity 3 quadrature 3.22267174721 1110
+hyperelasticity 3 quadrature 3.21636104584 1110
+hyperelasticity 3 quadrature 3.2348678112 1110
+hyperelasticity 3 quadrature 3.21739172935 1110
+hyperelasticity 3 quadrature 3.23550200462 1110
+hyperelasticity 3 quadrature 3.22916412354 1110
+hyperelasticity 3 quadrature 3.23723196983 1110
+hyperelasticity 3 quadrature 3.22624611855 1110
+hyperelasticity 3 quadrature 3.222260952 1110
+hyperelasticity 3 quadrature 3.24258995056 1110
+hyperelasticity 3 quadrature 3.22836327553 1110
+hyperelasticity 3 quadrature 3.22169709206 1110
+hyperelasticity 3 quadrature 3.25014686584 1110
+hyperelasticity 3 quadrature 3.23277521133 1110
+hyperelasticity 3 tsfcrepr 1.78304314613 1202
+hyperelasticity 3 tsfcrepr 1.6805369854 1202
+hyperelasticity 3 tsfcrepr 1.62842297554 1202
+hyperelasticity 3 tsfcrepr 1.66754293442 1202
+hyperelasticity 3 tsfcrepr 1.61102700233 1202
+hyperelasticity 3 tsfcrepr 1.67657184601 1202
+hyperelasticity 3 tsfcrepr 1.63049411774 1202
+hyperelasticity 3 tsfcrepr 1.66476511955 1202
+hyperelasticity 3 tsfcrepr 1.63639307022 1202
+hyperelasticity 3 tsfcrepr 1.61482310295 1202
+hyperelasticity 3 tsfcrepr 1.65642690659 1202
+hyperelasticity 3 tsfcrepr 1.62494492531 1202
+hyperelasticity 3 tsfcrepr 1.66388702393 1202
+hyperelasticity 3 tsfcrepr 1.62144374847 1202
+hyperelasticity 3 tsfcrepr 1.66925883293 1202
+hyperelasticity 3 tsfcrepr 1.61251211166 1202
+hyperelasticity 3 tsfcrepr 1.62327098846 1202
+hyperelasticity 3 tsfcrepr 1.64877319336 1202
+hyperelasticity 3 tsfc-default 0.726660966873 1202
+hyperelasticity 3 tsfc-default 0.78839302063 1202
+hyperelasticity 3 tsfc-default 0.859956979752 1202
+hyperelasticity 3 tsfc-default 0.822551727295 1202
+hyperelasticity 3 tsfc-default 0.739700078964 1202
+hyperelasticity 3 tsfc-default 0.743385076523 1202
+hyperelasticity 3 tsfc-default 0.792583942413 1202
+hyperelasticity 3 tsfc-default 0.741399288177 1202
+hyperelasticity 3 tsfc-default 0.768622875214 1202
+hyperelasticity 3 tsfc-default 0.741572141647 1202
+hyperelasticity 3 tsfc-default 0.785405874252 1202
+hyperelasticity 3 tsfc-default 0.754616975784 1202
+hyperelasticity 3 tsfc-default 0.790060758591 1202
+hyperelasticity 3 tsfc-default 0.749577999115 1202
+hyperelasticity 3 tsfc-default 0.748841047287 1202
+hyperelasticity 3 tsfc-default 0.798753023148 1202
+hyperelasticity 3 tsfc-default 0.748504161835 1202
+hyperelasticity 3 tsfc-default 0.784170150757 1202
+holzapfel_ogden 3 uflacs 19.6928837299 48831
+holzapfel_ogden 3 uflacs 19.7023887634 48831
+holzapfel_ogden 3 uflacs 19.6704490185 48831
+holzapfel_ogden 3 uflacs 19.6458568573 48831
+holzapfel_ogden 3 uflacs 19.634169817 48831
+holzapfel_ogden 3 uflacs 19.7560148239 48831
+holzapfel_ogden 3 uflacs 19.3707790375 48831
+holzapfel_ogden 3 uflacs 19.6370120049 48831
+holzapfel_ogden 3 uflacs 19.6688818932 48831
+holzapfel_ogden 3 uflacs 19.3285901546 48831
+holzapfel_ogden 3 uflacs 19.667896986 48831
+holzapfel_ogden 3 uflacs 19.7320692539 48831
+holzapfel_ogden 3 uflacs 19.6660439968 48831
+holzapfel_ogden 3 uflacs 19.6833109856 48831
+holzapfel_ogden 3 uflacs 19.6290240288 48831
+holzapfel_ogden 3 uflacs 19.7225880623 48831
+holzapfel_ogden 3 uflacs 19.6731741428 48831
+holzapfel_ogden 3 uflacs 19.6389842033 48831
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+  Ignoring precision in integral metadata compiled using quadrature representation. Not implemented.
+holzapfel_ogden 3 quadrature 431.528462172 217377
+holzapfel_ogden 3 quadrature 426.897387981 217377
+holzapfel_ogden 3 quadrature 436.478441954 217377
+holzapfel_ogden 3 quadrature 420.463003874 217377
+holzapfel_ogden 3 quadrature 430.110741138 217377
+holzapfel_ogden 3 quadrature 427.148611069 217377
+holzapfel_ogden 3 quadrature 430.702761173 217377
+holzapfel_ogden 3 quadrature 420.720874786 217377
+holzapfel_ogden 3 quadrature 420.720671177 217377
+holzapfel_ogden 3 quadrature 430.998077154 217377
+holzapfel_ogden 3 quadrature 420.94405508 217377
+holzapfel_ogden 3 quadrature 429.88668704 217377
+holzapfel_ogden 3 quadrature 420.997937202 217377
+holzapfel_ogden 3 quadrature 429.629805803 217377
+holzapfel_ogden 3 quadrature 426.823431015 217377
+holzapfel_ogden 3 quadrature 430.04701519 217377
+holzapfel_ogden 3 quadrature 427.924721003 217377
+holzapfel_ogden 3 quadrature 431.439232111 217377
+holzapfel_ogden 3 tsfcrepr 4.73373222351 9034
+holzapfel_ogden 3 tsfcrepr 4.67975997925 9034
+holzapfel_ogden 3 tsfcrepr 4.70828080177 9034
+holzapfel_ogden 3 tsfcrepr 4.65999293327 9034
+holzapfel_ogden 3 tsfcrepr 4.6768951416 9034
+holzapfel_ogden 3 tsfcrepr 4.63940000534 9034
+holzapfel_ogden 3 tsfcrepr 4.67968583107 9034
+holzapfel_ogden 3 tsfcrepr 4.63341212273 9034
+holzapfel_ogden 3 tsfcrepr 4.66894769669 9034
+holzapfel_ogden 3 tsfcrepr 4.69479799271 9034
+holzapfel_ogden 3 tsfcrepr 4.61681079865 9034
+holzapfel_ogden 3 tsfcrepr 4.61757302284 9034
+holzapfel_ogden 3 tsfcrepr 4.58004808426 9034
+holzapfel_ogden 3 tsfcrepr 4.61372900009 9034
+holzapfel_ogden 3 tsfcrepr 4.65279698372 9034
+holzapfel_ogden 3 tsfcrepr 4.62121725082 9034
+holzapfel_ogden 3 tsfcrepr 4.66140508652 9034
+holzapfel_ogden 3 tsfcrepr 4.63936400414 9034
+holzapfel_ogden 3 tsfc-default 3.66775488853 9039
+holzapfel_ogden 3 tsfc-default 3.81719303131 9039
+holzapfel_ogden 3 tsfc-default 3.70310783386 9039
+holzapfel_ogden 3 tsfc-default 3.68273901939 9039
+holzapfel_ogden 3 tsfc-default 3.74296307564 9039
+holzapfel_ogden 3 tsfc-default 3.73642516136 9039
+holzapfel_ogden 3 tsfc-default 3.71261191368 9039
+holzapfel_ogden 3 tsfc-default 3.73378396034 9039
+holzapfel_ogden 3 tsfc-default 3.70196390152 9039
+holzapfel_ogden 3 tsfc-default 3.70987701416 9039
+holzapfel_ogden 3 tsfc-default 3.69162487984 9039
+holzapfel_ogden 3 tsfc-default 3.70770215988 9039
+holzapfel_ogden 3 tsfc-default 3.68009710312 9039
+holzapfel_ogden 3 tsfc-default 3.68018007278 9039
+holzapfel_ogden 3 tsfc-default 3.68678021431 9039
+holzapfel_ogden 3 tsfc-default 3.68042016029 9039
+holzapfel_ogden 3 tsfc-default 3.67335104942 9039
+holzapfel_ogden 3 tsfc-default 3.68529987335 9039
+helmholtz 2 ffc-nonaffine 0.438416004181 146
+helmholtz 2 ffc-nonaffine 0.168763875961 146
+helmholtz 2 ffc-nonaffine 0.164368867874 146
+helmholtz 2 ffc-nonaffine 0.165683031082 146
+helmholtz 2 ffc-nonaffine 0.165640830994 146
+helmholtz 2 ffc-nonaffine 0.165847063065 146
+helmholtz 2 ffc-nonaffine 0.166134357452 146
+helmholtz 2 ffc-nonaffine 0.151709794998 146
+helmholtz 2 ffc-nonaffine 0.166728258133 146
+helmholtz 2 ffc-nonaffine 0.162710905075 146
+helmholtz 2 ffc-nonaffine 0.167870044708 146
+helmholtz 2 ffc-nonaffine 0.163712978363 146
+helmholtz 2 ffc-nonaffine 0.149914979935 146
+helmholtz 2 ffc-nonaffine 0.168081045151 146
+helmholtz 2 ffc-nonaffine 0.164251804352 146
+helmholtz 2 ffc-nonaffine 0.165385007858 146
+helmholtz 2 ffc-nonaffine 0.162626028061 146
+helmholtz 2 ffc-nonaffine 0.165433168411 146
+elasticity 2 ffc-nonaffine 0.363098144531 188
+elasticity 2 ffc-nonaffine 0.278760910034 188
+elasticity 2 ffc-nonaffine 0.276575088501 188
+elasticity 2 ffc-nonaffine 0.276999950409 188
+elasticity 2 ffc-nonaffine 0.275803804398 188
+elasticity 2 ffc-nonaffine 0.27215886116 188
+elasticity 2 ffc-nonaffine 0.271831274033 188
+elasticity 2 ffc-nonaffine 0.275501966476 188
+elasticity 2 ffc-nonaffine 0.278529167175 188
+elasticity 2 ffc-nonaffine 0.280241966248 188
+elasticity 2 ffc-nonaffine 0.277513027191 188
+elasticity 2 ffc-nonaffine 0.26243185997 188
+elasticity 2 ffc-nonaffine 0.261879205704 188
+elasticity 2 ffc-nonaffine 0.315310955048 188
+elasticity 2 ffc-nonaffine 0.25759100914 188
+elasticity 2 ffc-nonaffine 0.259277105331 188
+elasticity 2 ffc-nonaffine 0.278860807419 188
+elasticity 2 ffc-nonaffine 0.263689041138 188
+hyperelasticity 2 ffc-nonaffine 7.04744911194 389
+hyperelasticity 2 ffc-nonaffine 7.08329486847 389
+hyperelasticity 2 ffc-nonaffine 7.01797914505 389
+hyperelasticity 2 ffc-nonaffine 7.08374500275 389
+hyperelasticity 2 ffc-nonaffine 7.04502105713 389
+hyperelasticity 2 ffc-nonaffine 7.02460813522 389
+hyperelasticity 2 ffc-nonaffine 6.97331905365 389
+hyperelasticity 2 ffc-nonaffine 6.99771785736 389
+hyperelasticity 2 ffc-nonaffine 6.93702721596 389
+hyperelasticity 2 ffc-nonaffine 6.98454403877 389
+hyperelasticity 2 ffc-nonaffine 6.99387097359 389
+hyperelasticity 2 ffc-nonaffine 6.97196102142 389
+hyperelasticity 2 ffc-nonaffine 6.95742678642 389
+hyperelasticity 2 ffc-nonaffine 7.03244590759 389
+hyperelasticity 2 ffc-nonaffine 6.99648809433 389
+hyperelasticity 2 ffc-nonaffine 7.01042294502 389
+hyperelasticity 2 ffc-nonaffine 7.08597803116 389
+hyperelasticity 2 ffc-nonaffine 7.11868286133 389
+holzapfel_ogden 2 ffc-nonaffine 189.476018906 31294
+holzapfel_ogden 2 ffc-nonaffine 187.060498953 31294
+holzapfel_ogden 2 ffc-nonaffine 186.327090979 31294
+holzapfel_ogden 2 ffc-nonaffine 185.01560688 31294
+holzapfel_ogden 2 ffc-nonaffine 185.842359304 31294
+holzapfel_ogden 2 ffc-nonaffine 185.68912077 31294
+holzapfel_ogden 2 ffc-nonaffine 186.474434853 31294
+holzapfel_ogden 2 ffc-nonaffine 186.97550106 31294
+holzapfel_ogden 2 ffc-nonaffine 187.811072111 31294
+holzapfel_ogden 2 ffc-nonaffine 188.084611893 31294
+holzapfel_ogden 2 ffc-nonaffine 183.774832249 31294
+holzapfel_ogden 2 ffc-nonaffine 187.580424786 31294
+holzapfel_ogden 2 ffc-nonaffine 186.396557093 31294
+holzapfel_ogden 2 ffc-nonaffine 186.291727066 31294
+holzapfel_ogden 2 ffc-nonaffine 186.877743006 31294
+holzapfel_ogden 2 ffc-nonaffine 181.675945997 31294
+holzapfel_ogden 2 ffc-nonaffine 183.141163826 31294
+holzapfel_ogden 2 ffc-nonaffine 181.435192108 31294
+helmholtz 3 ffc-nonaffine 0.72171998024 271
+helmholtz 3 ffc-nonaffine 0.397325992584 271
+helmholtz 3 ffc-nonaffine 0.396349906921 271
+helmholtz 3 ffc-nonaffine 0.400845050812 271
+helmholtz 3 ffc-nonaffine 0.397019863129 271
+helmholtz 3 ffc-nonaffine 0.398633956909 271
+helmholtz 3 ffc-nonaffine 0.397412776947 271
+helmholtz 3 ffc-nonaffine 0.401859760284 271
+helmholtz 3 ffc-nonaffine 0.389503955841 271
+helmholtz 3 ffc-nonaffine 0.404307126999 271
+helmholtz 3 ffc-nonaffine 0.400886058807 271
+helmholtz 3 ffc-nonaffine 0.396435022354 271
+helmholtz 3 ffc-nonaffine 0.39652299881 271
+helmholtz 3 ffc-nonaffine 0.406671047211 271
+helmholtz 3 ffc-nonaffine 0.397602081299 271
+helmholtz 3 ffc-nonaffine 0.394705057144 271
+helmholtz 3 ffc-nonaffine 0.397622108459 271
+helmholtz 3 ffc-nonaffine 0.395183086395 271
+elasticity 3 ffc-nonaffine 1.44744682312 457
+elasticity 3 ffc-nonaffine 1.44006991386 457
+elasticity 3 ffc-nonaffine 1.4473092556 457
+elasticity 3 ffc-nonaffine 1.45308184624 457
+elasticity 3 ffc-nonaffine 1.42779612541 457
+elasticity 3 ffc-nonaffine 1.43635511398 457
+elasticity 3 ffc-nonaffine 1.42317295074 457
+elasticity 3 ffc-nonaffine 1.43168878555 457
+elasticity 3 ffc-nonaffine 1.42766594887 457
+elasticity 3 ffc-nonaffine 1.42536711693 457
+elasticity 3 ffc-nonaffine 1.44350886345 457
+elasticity 3 ffc-nonaffine 1.42357301712 457
+elasticity 3 ffc-nonaffine 1.42315816879 457
+elasticity 3 ffc-nonaffine 1.42748188972 457
+elasticity 3 ffc-nonaffine 1.42076182365 457
+elasticity 3 ffc-nonaffine 1.40735697746 457
+elasticity 3 ffc-nonaffine 1.43977308273 457
+elasticity 3 ffc-nonaffine 1.43538594246 457
+hyperelasticity 3 ffc-nonaffine 308.075407267 1131
+hyperelasticity 3 ffc-nonaffine 308.174688101 1131
+hyperelasticity 3 ffc-nonaffine 309.186316013 1131
+hyperelasticity 3 ffc-nonaffine 310.261021137 1131
+hyperelasticity 3 ffc-nonaffine 311.08437109 1131
+hyperelasticity 3 ffc-nonaffine 309.431127787 1131
+hyperelasticity 3 ffc-nonaffine 310.028177977 1131
+hyperelasticity 3 ffc-nonaffine 309.383410931 1131
+hyperelasticity 3 ffc-nonaffine 310.517725945 1131
+hyperelasticity 3 ffc-nonaffine 306.334795952 1131
+hyperelasticity 3 ffc-nonaffine 304.891330957 1131
+hyperelasticity 3 ffc-nonaffine 307.587260008 1131
+hyperelasticity 3 ffc-nonaffine 306.385094166 1131
+hyperelasticity 3 ffc-nonaffine 306.037482023 1131
+hyperelasticity 3 ffc-nonaffine 307.949002028 1131
+hyperelasticity 3 ffc-nonaffine 307.844898939 1131
+hyperelasticity 3 ffc-nonaffine 305.211544037 1131
+hyperelasticity 3 ffc-nonaffine 304.291450024 1131
